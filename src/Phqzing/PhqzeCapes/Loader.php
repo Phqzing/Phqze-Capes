@@ -7,7 +7,7 @@ use pocketmine\player\Player;
 use pocketmine\entity\Skin;
 use pocketmine\command\{CommandSender, Command};
 use pocketmine\utils\TextFormat as TE;
-use dktapps\pmforms\{MenuForm, MenuOption};
+use Phqzing\PhqzeCapes\libs\dktapps\pmforms\{MenuForm, MenuOption};
 
 class Loader extends PluginBase {
 
@@ -75,7 +75,7 @@ class Loader extends PluginBase {
             ];
         }
         $disableButton = new MenuOption(TE::RED."Disable Cape");
-        if(is_null($capeList) or is_null($buttons))
+        if(count($this->getCapesList()) == 0)
         {
             $capeList = ["disable"];
             $buttons = [$disableButton];
