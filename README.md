@@ -1,4 +1,5 @@
 # Phqze-Capes
+icon.png
 A custom cape plugin for PocketMine-MP 4. 
 
 # How to add new capes
