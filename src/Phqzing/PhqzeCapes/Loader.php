@@ -7,7 +7,6 @@ use pocketmine\player\Player;
 use pocketmine\entity\Skin;
 use pocketmine\command\{CommandSender, Command};
 use pocketmine\utils\TextFormat as TE;
-use Phqzing\PhqzeCapes\libs\dktapps\pmforms\{MenuForm, MenuOption};
 
 class Loader extends PluginBase {
 
