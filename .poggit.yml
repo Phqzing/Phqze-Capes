@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Phqzing/Phqze-Capes
+build-by-default: true
+branches:
+- main
+projects:
+  PhqzeCapes:
+    libs:
+      - src: dktapps-pm-pl/pmforms/pmforms
+        version: ^2.0.0...
