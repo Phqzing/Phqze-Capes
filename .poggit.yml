@@ -3,7 +3,7 @@ build-by-default: true
 branches:
 - main
 projects:
-  PhqzeCapes:
+  Phqze-Capes:
     libs:
       - src: dktapps-pm-pl/pmforms/pmforms
         version: ^2.0.0...
