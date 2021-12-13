@@ -34,7 +34,7 @@ class Loader extends PluginBase {
                     {
                         if(!isset($args[1]))
                         {
-                            $sender->sendMessag(TE::RED."Please specify what cape you want to delete");
+                            $sender->sendMessage(TE::RED."Please specify what cape you want to delete");
                         }
                         $file = $this->getDataFolder()."capes/".$args[1].".png";
                         if(is_file($file))
