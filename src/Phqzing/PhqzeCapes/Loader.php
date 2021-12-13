@@ -75,8 +75,14 @@ class Loader extends PluginBase {
             ];
         }
         $disableButton = new MenuOption(TE::RED."Disable Cape");
-        array_push($capeList, "disable");
-        array_push($buttons, $disableButton);
+        if(is_null($capeList) or is_null($buttons))
+        {
+            $capeList = ["disable"];
+            $buttons = [$disableButton];
+        }else{
+            array_push($capeList, "disable");
+            array_push($buttons, $disableButton);
+        }
 
         return new MenuForm
         (
