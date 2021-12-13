@@ -1,5 +1,5 @@
 # Phqze-Capes
-A custom cape plugin for PocketMine-MP 4. 
+A plugin that allows you to add custom capes to your server!
 
 # How to add new capes
 **1.** download a 64x32 png cape file of your choice.
@@ -13,9 +13,9 @@ A custom cape plugin for PocketMine-MP 4.
 
 # Commands
 - /capes - will show you a UI that you can use to equip and look at all the capes that is available.
-- /capes remove </name of the cape file/> - will remove and delete the cape that you mention.
+- /capes remove </name of the cape/> - will remove and delete the cape that you mention.
 
-  e.g ``/capes remove examplecape.png``
+  e.g ``/capes remove ExampleCape``
   
 # TODO
 - add permissions for each cape
