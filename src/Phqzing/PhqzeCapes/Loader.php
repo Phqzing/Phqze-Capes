@@ -39,6 +39,11 @@ class Loader extends PluginBase {
                         $file = $this->getDataFolder()."capes/".$args[1].".png";
                         if(is_file($file))
                         {
+                            if(!$sender->hasPermission("capes.remove.use"))
+                            {
+                                $sender->sendMessage(TE::RED."You don't have the permission to use this command.");
+                                return true;
+                            }
                             unlink($file);
                             $sender->sendMessage(TE::GREEN."Successfully removed the cape with the name ".TE::GRAY.$args[1]);
                         }else{
@@ -64,7 +69,7 @@ class Loader extends PluginBase {
             ];
         }
         $disableButton = new MenuOption(TE::RED."Disable Cape");
-        array_push($capesList, "disable");
+        array_push($capeList, "disable");
         array_push($buttons, $disableButton);
 
         return new MenuForm
@@ -75,7 +80,7 @@ class Loader extends PluginBase {
 
             function(Player $player, int $data)use($capeList):void
             {
-                $clicked = $capList[$data];
+                $clicked = $capeList[$data];
                 if($clicked == "disable")
                 {
                     $this->equipCape($player);
@@ -88,8 +93,6 @@ class Loader extends PluginBase {
 
     public function equipCape(Player $player, $cape = null):void
     {
-        if(is_null($player)) return;
-
         $skin = $player->getSkin();
 
         if(!is_null($cape))
