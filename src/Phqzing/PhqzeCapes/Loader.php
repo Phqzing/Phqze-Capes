@@ -25,6 +25,11 @@ class Loader extends PluginBase {
             case "capes":
                 if($sender instanceof Player)
                 {
+                    if(!$sender->hasPermission("capes.command.use"))
+                    {
+                        $sender->sendMessage(TE::RED."You don't have permission to use this command.");
+                        return true;
+                    }
                     if(!isset($args[0]))
                     {
                         $sender->sendForm($this->mainCapesForm());
@@ -35,6 +40,7 @@ class Loader extends PluginBase {
                         if(!isset($args[1]))
                         {
                             $sender->sendMessage(TE::RED."Please specify what cape you want to delete");
+                            return true;
                         }
                         $file = $this->getDataFolder()."capes/".$args[1].".png";
                         if(is_file($file))
