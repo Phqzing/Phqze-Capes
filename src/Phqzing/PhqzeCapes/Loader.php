@@ -25,7 +25,7 @@ class Loader extends PluginBase {
             case "capes":
                 if($sender instanceof Player)
                 {
-                    if(!$sender->hasPermission("capes.command.use"))
+                    if(!$sender->hasPermission("phqzecapes.command.use"))
                     {
                         $sender->sendMessage(TE::RED."You don't have permission to use this command.");
                         return true;
@@ -45,7 +45,7 @@ class Loader extends PluginBase {
                         $file = $this->getDataFolder()."capes/".$args[1].".png";
                         if(is_file($file))
                         {
-                            if(!$sender->hasPermission("capes.remove.use"))
+                            if(!$sender->hasPermission("phqzecapes.remove.use"))
                             {
                                 $sender->sendMessage(TE::RED."You don't have the permission to use this command.");
                                 return true;
