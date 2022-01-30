@@ -10,7 +10,7 @@ commands:
     permission: capes.command.use
 
 permissions:
-  capes.command.use:
+  phqzecapes.command.use:
     default: true
-  capes.remove.use:
+  phqzecapes.remove.use:
     default: op
