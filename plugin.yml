@@ -7,7 +7,7 @@ main: Phqzing\PhqzeCapes\Loader
 commands:
   capes:
     description: "main command for Phqze Capes."
-    permission: capes.command.use
+    permission: phqzecapes.command.use
 
 permissions:
   phqzecapes.command.use:
